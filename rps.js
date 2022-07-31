@@ -23,7 +23,7 @@ console.log(player,"-",computer, "Player wins")
 function playRps(){
     var playerInput =  prompt("Choose rock, paper or scissors");
     var opponent ="";
-    playerInput.toLowerCase();
+    playerInput = playerInput.toLowerCase();
     if (playerInput == "rock"|| playerInput == "paper" || playerInput == "scissors")
     {
     getComputerChoice();
@@ -32,7 +32,7 @@ function playRps(){
         switch(playerInput)
         {
             case "paper":
-                return player++;
+                return player += 1;
             case "scissors":
                 return computer++;
                 default:
