@@ -1,6 +1,25 @@
 var player = 0;
 var computer = 0;
 
+game();
+
+function game(){
+    for (let i = 0; i < 5; i++){
+    playRps();
+    console.log("player = " + player,"computer = " + computer)
+    }
+ if (player > computer){
+console.log(player,"-",computer, "Player wins")
+ }
+ else if (player < computer){
+    (console.log(player,"-",computer, "Computer wins")
+    )
+ }
+ else{
+    console.log("It's a tie!")
+ }
+}
+
 function playRps(){
     var playerInput =  prompt("Choose rock, paper or scissors");
     var opponent ="";
