@@ -31,6 +31,7 @@ function playRps(){
         {
             case "paper":
             Player = Player +1;
+            console.log(Player)
             break;
             case "scissors":
                 Computer = Computer+ 1; 
@@ -83,7 +84,7 @@ function playRps(){
 
 
 function getComputerChoice(){
-    var random = getRandomIntInclusive(1,3);
+    let random = getRandomIntInclusive(1,3);
     
         if (random == 1){
             opponent = "rock";
