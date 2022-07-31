@@ -1,19 +1,17 @@
-var player = 0;
-var computer = 0;
-
+let Player = 0;
+let Computer = 0;
 game();
 
 function game(){
+    
     for (let i = 0; i < 5; i++){
     playRps();
-    console.log("player = " + player,"computer = " + computer)
     }
- if (player > computer){
-console.log(player,"-",computer, "Player wins")
- }
- else if (player < computer){
-    (console.log(player,"-",computer, "Computer wins")
-    )
+    if (Player > Computer){
+        console.log(Player,"-",Computer, "Player wins")
+    }
+    else if (Player < Computer){
+    (console.log(Player,"-",Computer, "Computer wins"))
  }
  else{
     console.log("It's a tie!")
@@ -21,45 +19,57 @@ console.log(player,"-",computer, "Player wins")
 }
 
 function playRps(){
-    var playerInput =  prompt("Choose rock, paper or scissors");
-    var opponent ="";
-    playerInput = playerInput.toLowerCase();
-    if (playerInput == "rock"|| playerInput == "paper" || playerInput == "scissors")
+    let PlayerInput = prompt("Choose rock, paper or scissors");
+    let opponent ="";
+    PlayerInput = PlayerInput.toLowerCase();
+    if (PlayerInput == "rock"|| PlayerInput == "paper" || PlayerInput == "scissors")
     {
     getComputerChoice();
     if (opponent == "rock")
     {
-        switch(playerInput)
+        switch(PlayerInput)
         {
             case "paper":
-                return player += 1;
+            Player = Player +1;
+            break;
             case "scissors":
-                return computer++;
-                default:
-                    return computer++ + player++;
+                Computer = Computer+ 1; 
+            break;
+            default:
+                Computer = Computer+ 1; 
+                Player = Player +1;            
+            break;
                     
         }
     }
     else if ( opponent == "paper")
     {
-        switch(playerInput){
+        switch(PlayerInput){
          case "rock":
-            return computer++;
+            Computer = Computer+ 1; 
+                        break;
         case "scissors": 
-        return player++;
+        Player = Player +1;
+                break;
         default:
-            return computer++ + player++;
+            Computer = Computer+ 1; 
+            Player = Player +1;
+        break;
   
         }
     }
     else if(opponent == "scissors"){
-        switch(playerInput){
+        switch(PlayerInput){
         case "rock":
-            return player++;
+            Player = Player +1;
+          break;
         case "paper":
-            return computer++;
+            Computer = Computer+ 1; 
+          break;
             default:
-                return computer++ + player++;
+                Computer = Computer+ 1; 
+                Player = Player +1;
+           break;
 
     
         }
