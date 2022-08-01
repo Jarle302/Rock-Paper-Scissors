@@ -5,6 +5,7 @@ header{
 }
 header h1{
     font-size: 5em;
+    margin-bottom: 0.2em;
 }
 .container{
     display:flex;
@@ -41,4 +42,9 @@ color:red;
 #vs{
     font-size: 5em;
     color: red;
+}
+
+#element{
+    font-size: 2em;
+    margin-top: 0;
 }

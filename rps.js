@@ -3,13 +3,15 @@ let Computer = 0;
 let PlayerInput;
 let txtBox = document.createElement("p");
 textBox.appendChild(txtBox)
+let choiceTxt = document.getElementById("testi");
+choiceTxt.innerText = "Your choice will be the difference between victory or defeat!"; 
 
         //Button that chooses rock when clicked
         const buttonROck = document.getElementById("rock")
         buttonROck.addEventListener('click',() => {
         PlayerInput = "rock";
         console.log("rock")
-        txtBox.innerText = "You have chosen Rock!";
+        choiceTxt.innerText ="You have chosen Rock!";
         getComputerChoice();
         playRps(PlayerInput, opponent)})
 
@@ -18,7 +20,7 @@ textBox.appendChild(txtBox)
         buttonScissors.addEventListener('click',() => {
         PlayerInput = "scissors";
         console.log("scissors")
-        txtBox.innerText = "You have chosen Scissors!";
+        choiceTxt.innerText = "You have chosen Scissors!";
         getComputerChoice();
         playRps(PlayerInput, opponent)})
 
@@ -27,7 +29,7 @@ textBox.appendChild(txtBox)
         buttonPaper.addEventListener('click',() => {
         PlayerInput = "paper";
         console.log("paper")
-        txtBox.innerText = "You have chosen Paper!";
+        choiceTxt.innerText ="You have chosen Paper!";
         getComputerChoice();
         playRps(PlayerInput, opponent)})
 
