@@ -7,3 +7,20 @@
     flex: 1;
 
 }
+
+.button:hover{
+    background-color: darkgoldenrod;
+}
+
+#fireTxt{
+color:red;
+}
+
+#grassTxt{
+    color:seagreen;
+    
+}
+
+#waterTxt{
+    color: blue;
+}
