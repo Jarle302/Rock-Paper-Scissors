@@ -48,3 +48,33 @@ color:red;
     font-size: 2em;
     margin-top: 0;
 }
+
+#textBox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gameTxt{
+    flex: 1;
+    margin-left: 2em;
+    font-size: 2em;
+}
+
+table{
+    display: flex;
+    justify-content: space-around;
+}
+
+#narration{
+    font-size: 4em;
+}
+
+
+body{
+}
+
+*{
+    color:deeppink;
+    font-family: 'Roboto', sans-serif;
+
+}

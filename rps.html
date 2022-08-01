@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <script src="rps.js" defer> </script>
 <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
@@ -22,11 +25,21 @@
         <button class="evilbutton" id="evilscissors"><img img src="grass.jpg"></button>
         <button class="evilbutton" id="evilpaper"><img img src="water.png"></button>
     </div>
-    
-       
         <div id="textBox">
-            <p id="testi"> Lalalalalallala</p>
+            <p id="pChoice" class="gameTxt"> </p>
+            <p id="narration"></p>
+            <p id="cChoice" class="gameTxt">Your rival goes second</p>
         </div>
-  
+  <div class="container">
+    <table>
+        <tr>
+        <td>YOU</td> 
+        <td id="playerPoints"></td>
+        </tr>
+        <tr><td>RIVAL</td>
+        <td id="rivalPoints"></td>
+        </tr>
+    </table>
+  </div>
     </body>
 </html>
