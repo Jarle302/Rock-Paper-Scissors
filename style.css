@@ -1,3 +1,11 @@
+
+header{
+    display: flex;
+    justify-content: center;
+}
+header h1{
+    font-size: 5em;
+}
 .container{
     display:flex;
     justify-content: center;
@@ -10,6 +18,8 @@ margin: 1em;
 }
 .evilbutton{
     flex: 1;
+    gap: 2em;
+margin: 1em;
 }
 .button:hover{
     background-color: darkgoldenrod;
