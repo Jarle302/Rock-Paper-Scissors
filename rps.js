@@ -1,30 +1,43 @@
 let Player = 0;
 let Computer = 0;
 let PlayerInput;
-game();
-console.log(Player);
-console.log(Computer);
-console.log(PlayerInput,"yo");
-console.log(opponent);
+
+const buttonROck = document.getElementById("rock")
+        buttonROck.addEventListener('click',() => {
+        PlayerInput = "rock";
+        getComputerChoice();
+        playRps(PlayerInput, opponent)})
+
+        const buttonScissors = document.getElementById("scissors")
+        buttonROck.addEventListener('click',() => {
+        PlayerInput = "scissors";
+        getComputerChoice();
+        playRps(PlayerInput, opponent)})
+        const buttonPaper = document.getElementById("paper")
+        buttonPaper.addEventListener('click',() => {
+        PlayerInput = "paper"
+        getComputerChoice();
+        playRps(PlayerInput, opponent)})
+
+ /*game();
 
 function game(){
     
-    for (let i = 0; i < 5; i++){
-        
-        getComputerChoice();
+   for (let i = 0; i < 5; i++){
         getPlayerInput();
+        getComputerChoice();
     playRps(PlayerInput,opponent);
     }
     if (Player > Computer){
         console.log(Player,"-",Computer, "Player wins")
     }
     else if (Player < Computer){
-    (console.log(Player,"-",Computer, "Computer wins"))
+    (console.log(Player," ",Computer, "Computer wins"))
  }
  else{
     console.log("It's a tie!")
  }
-}
+}*/
 
 function playRps(PlayerInput, opponent){
  
@@ -78,9 +91,7 @@ function playRps(PlayerInput, opponent){
     
         }
     }
-    else
-    throw new error;
-    }
+}
         
 
 
@@ -109,8 +120,18 @@ function getComputerChoice(){
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1) + min);}
 
-function getPlayerInput(){
+        
+
+
+
+/*function getPlayerInput(){
     PlayerInput = prompt("Choose rock, paper or scissors");
     PlayerInput = PlayerInput.toLowerCase();
+    if (PlayerInput == "rock"|| PlayerInput == "paper" || PlayerInput == "scissors")
+    {
     return PlayerInput;
     }
+    else
+    throw new Error("invalid input, input :rock,paper or scissors")*/
+
+   
