@@ -5,9 +5,12 @@
 
 .button{
     flex: 1;
-
+    gap: 2em;
+margin: 1em;
 }
-
+.evilbutton{
+    flex: 1;
+}
 .button:hover{
     background-color: darkgoldenrod;
 }
@@ -23,4 +26,9 @@ color:red;
 
 #waterTxt{
     color: blue;
+}
+
+#vs{
+    font-size: 5em;
+    color: red;
 }

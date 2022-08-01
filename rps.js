@@ -1,21 +1,33 @@
 let Player = 0;
 let Computer = 0;
 let PlayerInput;
+let txtBox = document.createElement("p");
+textBox.appendChild(txtBox)
 
-const buttonROck = document.getElementById("rock")
+        //Button that chooses rock when clicked
+        const buttonROck = document.getElementById("rock")
         buttonROck.addEventListener('click',() => {
         PlayerInput = "rock";
+        console.log("rock")
+        txtBox.innerText = "You have chosen Rock!";
         getComputerChoice();
         playRps(PlayerInput, opponent)})
 
+        //Button that chooses scissors when clicked
         const buttonScissors = document.getElementById("scissors")
-        buttonROck.addEventListener('click',() => {
+        buttonScissors.addEventListener('click',() => {
         PlayerInput = "scissors";
+        console.log("scissors")
+        txtBox.innerText = "You have chosen Scissors!";
         getComputerChoice();
         playRps(PlayerInput, opponent)})
+
+        //Button that chooses paper when clicked
         const buttonPaper = document.getElementById("paper")
         buttonPaper.addEventListener('click',() => {
-        PlayerInput = "paper"
+        PlayerInput = "paper";
+        console.log("paper")
+        txtBox.innerText = "You have chosen Paper!";
         getComputerChoice();
         playRps(PlayerInput, opponent)})
 

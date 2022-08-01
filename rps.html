@@ -2,16 +2,26 @@
 <html>
     <head>
         <script src="rps.js" defer> </script>
-
+<link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
         <title>rock-paper-scissors</title>
     </head>
     <body>
-        <header><h1><span id="fireTxt">Fire</span><span id="waterTxt">Water</span><span>Grass</span></h1></header>
+        <header><h1><span id="fireTxt">Fire</span><span id="waterTxt">Water</span><span id="grassTxt">Grass</span></h1></header>
+        <div class="container">
+
+        </div>
         <div class="container">
         <button class="button" id="rock"><img img src="fire.png"></button>
         <button class="button" id="scissors"><img img src="grass.jpg"></button>
         <button class="button" id="paper"><img img src="water.png"></button>
+        <p id="vs">V.S</p>
+        <button class="evilbutton" id="evilrock"><img img src="fire.png"></button>
+        <button class="evilbutton" id="evilscissors"><img img src="grass.jpg"></button>
+        <button class="evilbutton" id="evilpaper"><img img src="water.png"></button>
+    </div>
+    <div id="textBox" class="container">
+        <p id="combatTxt">Choose your element!</p>
     </div>
     </body>
 </html>
