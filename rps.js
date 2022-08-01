@@ -1,11 +1,19 @@
 let Player = 0;
 let Computer = 0;
+let PlayerInput;
 game();
+console.log(Player);
+console.log(Computer);
+console.log(PlayerInput,"yo");
+console.log(opponent);
 
 function game(){
     
     for (let i = 0; i < 5; i++){
-    playRps();
+        
+        getComputerChoice();
+        getPlayerInput();
+    playRps(PlayerInput,opponent);
     }
     if (Player > Computer){
         console.log(Player,"-",Computer, "Player wins")
@@ -18,13 +26,8 @@ function game(){
  }
 }
 
-function playRps(){
-    let PlayerInput = prompt("Choose rock, paper or scissors");
-    let opponent ="";
-    PlayerInput = PlayerInput.toLowerCase();
-    if (PlayerInput == "rock"|| PlayerInput == "paper" || PlayerInput == "scissors")
-    {
-    getComputerChoice();
+function playRps(PlayerInput, opponent){
+ 
     if (opponent == "rock")
     {
         switch(PlayerInput)
@@ -75,12 +78,10 @@ function playRps(){
     
         }
     }
-    }
     else
-    { 
-    throw new Error("choose either rock, paper or scissors")
+    throw new error;
     }
-    }
+        
 
 
 function getComputerChoice(){
@@ -107,3 +108,9 @@ function getComputerChoice(){
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1) + min);}
+
+function getPlayerInput(){
+    PlayerInput = prompt("Choose rock, paper or scissors");
+    PlayerInput = PlayerInput.toLowerCase();
+    return PlayerInput;
+    }
