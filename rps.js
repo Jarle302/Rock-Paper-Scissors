@@ -11,29 +11,9 @@ narrator.innerText = " WATER BEATS FIRE";
 let pointsP = document.getElementById("playerPoints");
 pointsP.innerText = Player;
 let pointsR = document.getElementById("rivalPoints");
-pointsP.innerText = Computer;
+pointsR.innerText = Computer;
 
-if (Player >= 5 || Computer >=5)
-{
-    if(Player >= 5)
-    {
-        narrator.innerText = "Player wins!"
-        Player = 0;
-        Computer = 0;
-    }
-    else if(Computer >= 5)
-    {
-        narrator.innerText = "Computer wins!"
-        Player = 0;
-        Computer = 0;
-    }
-    else
-    {
-        narrator.innerText = "DRAW!"
-        Player = 0;
-        Computer = 0;
-    }
-}
+
 
         //Button that chooses rock when clicked
         const buttonROck = document.getElementById("rock")
@@ -84,24 +64,48 @@ function game(){
 
 //plays a round of rock paper scissors
 function playRps(PlayerInput, opponent){
- 
-    if (opponent == "rock")
+    if (Player >= 5 || Computer >=5)
+    {
+        if(Player >= 5 && Computer >= 5)
+        {
+            narrator.innerText = "DRAW!"
+            Player = 0;
+            Computer = 0;
+        }
+        else if(Computer >= 5)
+        {
+            narrator.innerText = "Computer wins!"
+            Player = 0;
+            Computer = 0;
+        }
+        else
+        {
+            narrator.innerText = "Player wins!"
+            Player = 0;
+            Computer = 0;
+        }
+        
+    }
+    else if (opponent == "rock")
     {
         switch(PlayerInput)
         {
             case "paper":
-                narrator.innerText = " WATER BEATS FIRE! You win the round";
-
+            narrator.innerText = " WATER BEATS FIRE! You win the round";
             Player = Player +1;
-            console.log(Player)
+            pointsP.innerText = Player;
             break;
             case "scissors":
                 narrator.innerText = " FIRE BEATS GRASS! You lose the round";
+                Computer = Computer + 1;
+                pointsR.innerText = Computer;
             break;
             default:
             narrator.innerText = " FIRE vs FIRE! It's a TIE!";
                 Computer = Computer+ 1; 
-                Player = Player +1;            
+                Player = Player +1; 
+                pointsP.innerText = Player;
+                pointsR.innerText = Computer;
             break;
                     
         }
@@ -111,15 +115,20 @@ function playRps(PlayerInput, opponent){
         switch(PlayerInput){
          case "rock":
             narrator.innerText = " WATER BEATS FIRE! Rival wins the round";
+            pointsR.innerText = Computer;
             break;
         case "scissors":
             narrator.innerText = " GRASS BEATS WATER! You win the round!" 
         Player = Player +1;
+        pointsP.innerText = Player;
                 break;
         default:
             narrator.innerText = " WATER vs WATER! It's a TIE!";
             Computer = Computer+ 1; 
             Player = Player +1;
+            pointsP.innerText = Player;
+            pointsR.innerText = Computer;
+
         break;
   
         }
@@ -129,16 +138,19 @@ function playRps(PlayerInput, opponent){
         case "rock":
             narrator.innerText = " FIRE BEATS GRASS! You win!"
             Player = Player +1;
+            pointsP.innerText = Player;
           break;
         case "paper":
             narrator.innerText = " GRASS BEATS WATER! RIVAL wins the round!";
-
-            Computer = Computer+ 1; 
+            Computer = Computer+ 1;
+            pointsR.innerText = Computer; 
           break;
             default:
                 narrator.innerText = " GRASS vs GRASS! It's a TIE!";
                 Computer = Computer+ 1; 
                 Player = Player +1;
+                pointsP.innerText = Player;
+                pointsR.innerText = Computer;
            break;
 
     
@@ -167,6 +179,8 @@ function getComputerChoice(){
     return opponent;
     }
     
+
+
     
     function getRandomIntInclusive(min, max) {
         min = Math.ceil(min);
